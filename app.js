@@ -39,7 +39,7 @@ http.createServer(app).listen(config.get('port'), () => {
 
 app.use((err, req, res, next) => {
     // NODE_ENV
-    if (typeof err == 'number') { // next(404);
+    if (typeof err == 'number') {
         err = new HttpError(err);
     }
 
